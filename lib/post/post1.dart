@@ -1,34 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:tikodc/util/my_icon.dart';
+import 'package:tikodc/util/post_template.dart';
 
 class Post1 extends StatelessWidget {
   const Post1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                alignment: Alignment(-1, 1),
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        '@diarraidrissadiaraba',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text('tiktok vidéo drole'),
-                    ]),
-              ))
-        ],
-      ),
-    );
+    return PostTemplate(
+        userame: 'diarraidrissadiaraba',
+        videoDescription: 'tiktok video drole',
+        numberOfComments: '1223',
+        numberOfLikes: '1.5 M',
+        numberOfShares: '122',
+        userPost: Container(
+          color: Colors.deepPurple,
+          )
+          );
   }
 }
