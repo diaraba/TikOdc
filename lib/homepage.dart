@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   final List<Widget> _pages = [
-    UserHomePage(),
+    HomePag(),
     UserSearchPage(),
     UserPlusPage(),
     UserInboxPage(),
@@ -36,32 +36,43 @@ class _HomePageState extends State<HomePage> {
           currentIndex: _selectedIndex,
           onTap: _navigateBottomBar,
           type: BottomNavigationBarType.fixed,
+          unselectedLabelStyle: const TextStyle(
+          color: Color.fromARGB(255, 10, 10, 10), fontSize: 14),
+          backgroundColor: Color.fromRGBO(5, 5, 5, 1),
+          fixedColor: Colors.white,
+          unselectedItemColor: Colors.white,
           items: [
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.home,
+                  color: Colors.white,
                 ),
                 label: 'Home'),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.search,
+                  color: Colors.white,
                 ),
                 label: 'Search'),
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.add_box_rounded,
+                icon: Image.asset(
+                  'assets/images/tiktok_add.png',
+                  height: 30,
                 ),
                 label: ''),
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.chat_bubble_rounded,
-                ),
-                label: 'Inbox'),
+              icon: Icon(
+                Icons.chat_bubble_rounded,
+                color: Colors.white,
+              ),
+              label: 'Inbox',
+            ),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.person,
+                  color: Colors.white,
                 ),
-                label: 'Profile'),
+                label: 'Profile '),
           ]),
     );
   }
